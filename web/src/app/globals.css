@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Color tokens */
+  --color-background: #fdf5e6; /* warm pastel cream */
+  --color-foreground: #2d2a2e; /* deep indigo text */
+  --color-primary: #ff7f50;   /* coral accent */
+  --color-accent: #6b8e23;    /* olive */
+  --color-card: #ffffff;     
+  --color-muted: #f3e8ff;    /* soft lavender */
+  --color-border: #e2e8f0;    
+  --color-success: #38a169;  
+  --color-warning: #d69e2e;  
+
+  /* Shape tokens */
+  --radius: 0.75rem;
+  --shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Subtle grain texture */
+body {
+  background: radial-gradient(circle at 20% 30%, var(--color-muted) 0%, var(--color-background) 70%);
+  background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Card base style */
+.card {
+  @apply bg-card rounded-lg shadow-md p-4;
+}
